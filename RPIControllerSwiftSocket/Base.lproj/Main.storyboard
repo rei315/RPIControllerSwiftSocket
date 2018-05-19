@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14109" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="bZa-xi-ue1">
+    <device id="retina5_9" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -9,16 +14,98 @@
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="RPIControllerSwiftSocket" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <progressView opaque="NO" contentMode="scaleToFill" verticalHuggingPriority="750" progress="0.5" translatesAutoresizingMaskIntoConstraints="NO" id="weB-AU-BaB">
+                                <rect key="frame" x="60" y="100" width="254" height="2"/>
+                            </progressView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="101" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="LCj-PT-YXm">
+                                <rect key="frame" x="0.0" y="88" width="375" height="724"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="none" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="Device" id="BUO-UX-bdg" customClass="DeviceCell" customModule="RPIControllerSwiftSocket" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="375" height="101"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="BUO-UX-bdg" id="VxJ-lv-hCI">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="100.66666666666667"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" restorationIdentifier="HomeLightImg" translatesAutoresizingMaskIntoConstraints="NO" id="rsA-qO-sRo">
+                                                    <rect key="frame" x="156" y="10" width="63" height="63"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                                <textField opaque="NO" userInteractionEnabled="NO" contentMode="scaleToFill" fixedFrame="YES" restorationIdentifier="HomeLightText" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="test" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MbS-jf-mZm">
+                                                    <rect key="frame" x="120" y="74" width="134" height="16"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <nil key="textColor"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                    <textInputTraits key="textInputTraits"/>
+                                                </textField>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="deviceImage" destination="rsA-qO-sRo" id="0A8-S9-iiP"/>
+                                            <outlet property="deviceName" destination="MbS-jf-mZm" id="YBc-HF-Ceb"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="weB-AU-BaB" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="12" id="8OK-uS-NWW"/>
+                            <constraint firstItem="weB-AU-BaB" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="HCk-Qw-Ywg"/>
+                            <constraint firstItem="weB-AU-BaB" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" constant="44" id="KSN-bz-wV2"/>
+                            <constraint firstItem="LCj-PT-YXm" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="WP6-tq-xhU"/>
+                            <constraint firstAttribute="bottom" secondItem="LCj-PT-YXm" secondAttribute="bottom" id="evQ-65-2X5"/>
+                            <constraint firstItem="LCj-PT-YXm" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="vdI-cI-Dnf"/>
+                            <constraint firstItem="LCj-PT-YXm" firstAttribute="centerX" secondItem="weB-AU-BaB" secondAttribute="centerX" id="vsu-VN-qFo"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <navigationItem key="navigationItem" id="v2H-Oe-xae">
+                        <nil key="title"/>
+                        <barButtonItem key="rightBarButtonItem" title="Item" image="refresh" id="7Gr-Ly-ucs">
+                            <connections>
+                                <action selector="refresh:" destination="BYZ-38-t0r" id="yHW-7j-Xqn"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="navigationBarTitle" destination="v2H-Oe-xae" id="jCB-TA-ECR"/>
+                        <outlet property="progressView" destination="weB-AU-BaB" id="Gh7-qp-h1d"/>
+                        <outlet property="scanButton" destination="7Gr-Ly-ucs" id="OiH-Kf-Eee"/>
+                        <outlet property="tableTopConstraint" destination="WP6-tq-xhU" id="pLe-2I-bIA"/>
+                        <outlet property="tableView" destination="LCj-PT-YXm" id="lx2-g3-b8S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1079.2" y="132.26600985221674"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="eiT-CU-ypP">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="bZa-xi-ue1" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="cdK-qB-Z3M">
+                        <rect key="frame" x="0.0" y="44" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="28P-91-W7o"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="DTq-ex-fbs" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="297" y="133"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="refresh" width="25" height="25"/>
+    </resources>
 </document>
