@@ -7,14 +7,51 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		80389B1820744F56008BE7EB /* NetworkCalculator.m in Sources */ = {isa = PBXBuildFile; fileRef = 80389B1220744F55008BE7EB /* NetworkCalculator.m */; };
+		80389B1920744F56008BE7EB /* MMLANScanner.m in Sources */ = {isa = PBXBuildFile; fileRef = 80389B1420744F56008BE7EB /* MMLANScanner.m */; };
+		80389B1A20744F56008BE7EB /* LANProperties.m in Sources */ = {isa = PBXBuildFile; fileRef = 80389B1620744F56008BE7EB /* LANProperties.m */; };
+		80389B1F20744FC1008BE7EB /* data.plist in Resources */ = {isa = PBXBuildFile; fileRef = 80389B1E20744FC1008BE7EB /* data.plist */; };
+		80389B2520744FDB008BE7EB /* MACOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80389B2220744FDB008BE7EB /* MACOperation.m */; };
+		80389B2620744FDB008BE7EB /* PingOperation.m in Sources */ = {isa = PBXBuildFile; fileRef = 80389B2420744FDB008BE7EB /* PingOperation.m */; };
+		80389B2C20745012008BE7EB /* SimplePing.m in Sources */ = {isa = PBXBuildFile; fileRef = 80389B2B20745012008BE7EB /* SimplePing.m */; };
+		80389B2F2074501A008BE7EB /* MacFinder.m in Sources */ = {isa = PBXBuildFile; fileRef = 80389B2E2074501A008BE7EB /* MacFinder.m */; };
+		80389B3A20745152008BE7EB /* MMDevice.m in Sources */ = {isa = PBXBuildFile; fileRef = 80389B3920745152008BE7EB /* MMDevice.m */; };
+		80389B3C20746661008BE7EB /* MainPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 80389B3B20746661008BE7EB /* MainPresenter.swift */; };
 		8050E443206F94FD007FFC32 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8050E442206F94FD007FFC32 /* AppDelegate.swift */; };
 		8050E445206F94FD007FFC32 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8050E444206F94FD007FFC32 /* ViewController.swift */; };
 		8050E448206F94FD007FFC32 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8050E446206F94FD007FFC32 /* Main.storyboard */; };
 		8050E44A206F94FD007FFC32 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8050E449206F94FD007FFC32 /* Assets.xcassets */; };
 		8050E44D206F94FD007FFC32 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8050E44B206F94FD007FFC32 /* LaunchScreen.storyboard */; };
+		805B17682075D17700669531 /* DeviceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 805B17672075D17700669531 /* DeviceCell.swift */; };
+		D732087AEF8BF80995E5AA8C /* Pods_RPIControllerSwiftSocket.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70E05C9A7BF621682AB1B0EF /* Pods_RPIControllerSwiftSocket.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1C738BD6E6ECEF5C19979DFA /* Pods-RPIControllerSwiftSocket.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPIControllerSwiftSocket.release.xcconfig"; path = "Pods/Target Support Files/Pods-RPIControllerSwiftSocket/Pods-RPIControllerSwiftSocket.release.xcconfig"; sourceTree = "<group>"; };
+		23E088531CA0B11FE64957F1 /* Pods-RPIControllerSwiftSocket.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RPIControllerSwiftSocket.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RPIControllerSwiftSocket/Pods-RPIControllerSwiftSocket.debug.xcconfig"; sourceTree = "<group>"; };
+		70E05C9A7BF621682AB1B0EF /* Pods_RPIControllerSwiftSocket.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RPIControllerSwiftSocket.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		80389B1120744F54008BE7EB /* RPIControllerSwiftSocket-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "RPIControllerSwiftSocket-Bridging-Header.h"; sourceTree = "<group>"; };
+		80389B1220744F55008BE7EB /* NetworkCalculator.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = NetworkCalculator.m; sourceTree = "<group>"; };
+		80389B1320744F55008BE7EB /* NetworkCalculator.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = NetworkCalculator.h; sourceTree = "<group>"; };
+		80389B1420744F56008BE7EB /* MMLANScanner.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMLANScanner.m; sourceTree = "<group>"; };
+		80389B1520744F56008BE7EB /* LANProperties.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LANProperties.h; sourceTree = "<group>"; };
+		80389B1620744F56008BE7EB /* LANProperties.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LANProperties.m; sourceTree = "<group>"; };
+		80389B1720744F56008BE7EB /* MMLANScanner.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMLANScanner.h; sourceTree = "<group>"; };
+		80389B1E20744FC1008BE7EB /* data.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = data.plist; sourceTree = "<group>"; };
+		80389B2120744FDB008BE7EB /* MACOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MACOperation.h; sourceTree = "<group>"; };
+		80389B2220744FDB008BE7EB /* MACOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MACOperation.m; sourceTree = "<group>"; };
+		80389B2320744FDB008BE7EB /* PingOperation.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PingOperation.h; sourceTree = "<group>"; };
+		80389B2420744FDB008BE7EB /* PingOperation.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PingOperation.m; sourceTree = "<group>"; };
+		80389B2A20745012008BE7EB /* SimplePing.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SimplePing.h; sourceTree = "<group>"; };
+		80389B2B20745012008BE7EB /* SimplePing.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SimplePing.m; sourceTree = "<group>"; };
+		80389B2D2074501A008BE7EB /* MacFinder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MacFinder.h; sourceTree = "<group>"; };
+		80389B2E2074501A008BE7EB /* MacFinder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MacFinder.m; sourceTree = "<group>"; };
+		80389B3120745034008BE7EB /* route.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = route.h; sourceTree = "<group>"; };
+		80389B3220745034008BE7EB /* if_ether.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = if_ether.h; sourceTree = "<group>"; };
+		80389B3320745035008BE7EB /* if_arp.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = if_arp.h; sourceTree = "<group>"; };
+		80389B3820745152008BE7EB /* MMDevice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MMDevice.h; sourceTree = "<group>"; };
+		80389B3920745152008BE7EB /* MMDevice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MMDevice.m; sourceTree = "<group>"; };
+		80389B3B20746661008BE7EB /* MainPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainPresenter.swift; sourceTree = "<group>"; };
 		8050E43F206F94FD007FFC32 /* RPIControllerSwiftSocket.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RPIControllerSwiftSocket.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8050E442206F94FD007FFC32 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		8050E444206F94FD007FFC32 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -22,6 +59,7 @@
 		8050E449206F94FD007FFC32 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8050E44C206F94FD007FFC32 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8050E44E206F94FD007FFC32 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		805B17672075D17700669531 /* DeviceCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -29,17 +67,146 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D732087AEF8BF80995E5AA8C /* Pods_RPIControllerSwiftSocket.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		050589918788B04D62232E1E /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				70E05C9A7BF621682AB1B0EF /* Pods_RPIControllerSwiftSocket.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		0646E519BBC025410BECE79D /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				23E088531CA0B11FE64957F1 /* Pods-RPIControllerSwiftSocket.debug.xcconfig */,
+				1C738BD6E6ECEF5C19979DFA /* Pods-RPIControllerSwiftSocket.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		80389B0F20744F37008BE7EB /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+				80389B342074504D008BE7EB /* Bridging Header */,
+				80389B2720744FF0008BE7EB /* External Libs */,
+				80389B2020744FCA008BE7EB /* Operations */,
+				80389B1D20744FB0008BE7EB /* Data */,
+				80389B1020744F45008BE7EB /* Lan Scan Libs */,
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		80389B1020744F45008BE7EB /* Lan Scan Libs */ = {
+			isa = PBXGroup;
+			children = (
+				80389B1520744F56008BE7EB /* LANProperties.h */,
+				80389B1620744F56008BE7EB /* LANProperties.m */,
+				80389B1720744F56008BE7EB /* MMLANScanner.h */,
+				80389B1420744F56008BE7EB /* MMLANScanner.m */,
+				80389B1320744F55008BE7EB /* NetworkCalculator.h */,
+				80389B1220744F55008BE7EB /* NetworkCalculator.m */,
+			);
+			path = "Lan Scan Libs";
+			sourceTree = "<group>";
+		};
+		80389B1D20744FB0008BE7EB /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				80389B1E20744FC1008BE7EB /* data.plist */,
+			);
+			name = Data;
+			path = "New Group";
+			sourceTree = "<group>";
+		};
+		80389B2020744FCA008BE7EB /* Operations */ = {
+			isa = PBXGroup;
+			children = (
+				80389B2120744FDB008BE7EB /* MACOperation.h */,
+				80389B2220744FDB008BE7EB /* MACOperation.m */,
+				80389B2320744FDB008BE7EB /* PingOperation.h */,
+				80389B2420744FDB008BE7EB /* PingOperation.m */,
+			);
+			path = Operations;
+			sourceTree = "<group>";
+		};
+		80389B2720744FF0008BE7EB /* External Libs */ = {
+			isa = PBXGroup;
+			children = (
+				80389B2920745006008BE7EB /* MacFinder */,
+				80389B2820744FFF008BE7EB /* Simple Ping */,
+			);
+			path = "External Libs";
+			sourceTree = "<group>";
+		};
+		80389B2820744FFF008BE7EB /* Simple Ping */ = {
+			isa = PBXGroup;
+			children = (
+				80389B2A20745012008BE7EB /* SimplePing.h */,
+				80389B2B20745012008BE7EB /* SimplePing.m */,
+			);
+			path = "Simple Ping";
+			sourceTree = "<group>";
+		};
+		80389B2920745006008BE7EB /* MacFinder */ = {
+			isa = PBXGroup;
+			children = (
+				80389B3020745026008BE7EB /* Network Headers */,
+				80389B2D2074501A008BE7EB /* MacFinder.h */,
+				80389B2E2074501A008BE7EB /* MacFinder.m */,
+			);
+			path = MacFinder;
+			sourceTree = "<group>";
+		};
+		80389B3020745026008BE7EB /* Network Headers */ = {
+			isa = PBXGroup;
+			children = (
+				80389B3320745035008BE7EB /* if_arp.h */,
+				80389B3220745034008BE7EB /* if_ether.h */,
+				80389B3120745034008BE7EB /* route.h */,
+			);
+			path = "Network Headers";
+			sourceTree = "<group>";
+		};
+		80389B342074504D008BE7EB /* Bridging Header */ = {
+			isa = PBXGroup;
+			children = (
+				80389B1120744F54008BE7EB /* RPIControllerSwiftSocket-Bridging-Header.h */,
+			);
+			path = "Bridging Header";
+			sourceTree = "<group>";
+		};
+		80389B3620745143008BE7EB /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				80389B3820745152008BE7EB /* MMDevice.h */,
+				80389B3920745152008BE7EB /* MMDevice.m */,
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		80389B3720745149008BE7EB /* MainVC */ = {
+			isa = PBXGroup;
+			children = (
+				8050E444206F94FD007FFC32 /* ViewController.swift */,
+				80389B3B20746661008BE7EB /* MainPresenter.swift */,
+			);
+			path = MainVC;
+			sourceTree = "<group>";
+		};
 		8050E436206F94FD007FFC32 = {
 			isa = PBXGroup;
 			children = (
 				8050E441206F94FD007FFC32 /* RPIControllerSwiftSocket */,
 				8050E440206F94FD007FFC32 /* Products */,
+				0646E519BBC025410BECE79D /* Pods */,
+				050589918788B04D62232E1E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -54,12 +221,15 @@
 		8050E441206F94FD007FFC32 /* RPIControllerSwiftSocket */ = {
 			isa = PBXGroup;
 			children = (
+				80389B3720745149008BE7EB /* MainVC */,
+				80389B3620745143008BE7EB /* Objects */,
+				80389B0F20744F37008BE7EB /* Libraries */,
 				8050E442206F94FD007FFC32 /* AppDelegate.swift */,
-				8050E444206F94FD007FFC32 /* ViewController.swift */,
 				8050E446206F94FD007FFC32 /* Main.storyboard */,
 				8050E449206F94FD007FFC32 /* Assets.xcassets */,
 				8050E44B206F94FD007FFC32 /* LaunchScreen.storyboard */,
 				8050E44E206F94FD007FFC32 /* Info.plist */,
+				805B17672075D17700669531 /* DeviceCell.swift */,
 			);
 			path = RPIControllerSwiftSocket;
 			sourceTree = "<group>";
@@ -71,9 +241,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8050E451206F94FD007FFC32 /* Build configuration list for PBXNativeTarget "RPIControllerSwiftSocket" */;
 			buildPhases = (
+				759654C72A2326FD5B86B79C /* [CP] Check Pods Manifest.lock */,
 				8050E43B206F94FD007FFC32 /* Sources */,
 				8050E43C206F94FD007FFC32 /* Frameworks */,
 				8050E43D206F94FD007FFC32 /* Resources */,
+				0C2661AD5753628F4AA4598C /* [CP] Embed Pods Frameworks */,
+				BBC03916E78F4428D7FFFA2C /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -91,11 +264,12 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 0920;
-				LastUpgradeCheck = 0920;
+				LastUpgradeCheck = 0930;
 				ORGANIZATIONNAME = Capstone;
 				TargetAttributes = {
 					8050E43E206F94FD007FFC32 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0930;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -125,19 +299,84 @@
 			files = (
 				8050E44D206F94FD007FFC32 /* LaunchScreen.storyboard in Resources */,
 				8050E44A206F94FD007FFC32 /* Assets.xcassets in Resources */,
+				80389B1F20744FC1008BE7EB /* data.plist in Resources */,
 				8050E448206F94FD007FFC32 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		0C2661AD5753628F4AA4598C /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-RPIControllerSwiftSocket/Pods-RPIControllerSwiftSocket-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/SwiftSocket/SwiftSocket.framework",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SwiftSocket.framework",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPIControllerSwiftSocket/Pods-RPIControllerSwiftSocket-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		759654C72A2326FD5B86B79C /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-RPIControllerSwiftSocket-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BBC03916E78F4428D7FFFA2C /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-RPIControllerSwiftSocket/Pods-RPIControllerSwiftSocket-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		8050E43B206F94FD007FFC32 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				80389B1A20744F56008BE7EB /* LANProperties.m in Sources */,
+				80389B1920744F56008BE7EB /* MMLANScanner.m in Sources */,
+				80389B1820744F56008BE7EB /* NetworkCalculator.m in Sources */,
+				80389B2520744FDB008BE7EB /* MACOperation.m in Sources */,
+				80389B2F2074501A008BE7EB /* MacFinder.m in Sources */,
+				80389B3C20746661008BE7EB /* MainPresenter.swift in Sources */,
 				8050E445206F94FD007FFC32 /* ViewController.swift in Sources */,
 				8050E443206F94FD007FFC32 /* AppDelegate.swift in Sources */,
+				80389B2620744FDB008BE7EB /* PingOperation.m in Sources */,
+				80389B2C20745012008BE7EB /* SimplePing.m in Sources */,
+				80389B3A20745152008BE7EB /* MMDevice.m in Sources */,
+				805B17682075D17700669531 /* DeviceCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -177,6 +416,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -184,6 +424,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -234,6 +475,7 @@
 				CLANG_WARN_BOOL_CONVERSION = YES;
 				CLANG_WARN_COMMA = YES;
 				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
 				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
 				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
 				CLANG_WARN_EMPTY_BODY = YES;
@@ -241,6 +483,7 @@
 				CLANG_WARN_INFINITE_RECURSION = YES;
 				CLANG_WARN_INT_CONVERSION = YES;
 				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
@@ -272,14 +515,18 @@
 		};
 		8050E452206F94FD007FFC32 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 23E088531CA0B11FE64957F1 /* Pods-RPIControllerSwiftSocket.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3N72J4U62S;
 				INFOPLIST_FILE = RPIControllerSwiftSocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Capstone.RPIController.RPIControllerSwiftSocket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RPIControllerSwiftSocket/Libraries/Bridging Header/RPIControllerSwiftSocket-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -287,14 +534,17 @@
 		};
 		8050E453206F94FD007FFC32 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1C738BD6E6ECEF5C19979DFA /* Pods-RPIControllerSwiftSocket.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = 3N72J4U62S;
 				INFOPLIST_FILE = RPIControllerSwiftSocket/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.Capstone.RPIController.RPIControllerSwiftSocket;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "RPIControllerSwiftSocket/Libraries/Bridging Header/RPIControllerSwiftSocket-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
