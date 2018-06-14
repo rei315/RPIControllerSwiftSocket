@@ -9,9 +9,16 @@ class ViewController: UIViewController, MainPresenterDelegate,UITableViewDelegat
     @IBOutlet weak var tableTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
     
-    var deviceName: [String] = ["HomeLight","MainDoor","GarageDoor","Thermometer","oven","washingmachine","cctv","macbook"]
-    var deviceImg: [UIImage] = [#imageLiteral(resourceName: "light"),#imageLiteral(resourceName: "main"),#imageLiteral(resourceName: "garage"),#imageLiteral(resourceName: "temp"),#imageLiteral(resourceName: "open"),#imageLiteral(resourceName: "wasingmachine"),#imageLiteral(resourceName: "cctv"),#imageLiteral(resourceName: "macbook")]
-    
+    let deviceName: [String] = ["HomeLight","MainDoor","GarageDoor","Thermometer","oven","washingmachine","cctv"]
+    let deviceImg = [
+        UIImage(named: "light.png"),
+        UIImage(named: "main.png"),
+        UIImage(named: "garage.png"),
+        UIImage(named: "temp.png"),
+        UIImage(named: "oven.png"),
+        UIImage(named: "wasingmachine.png"),
+        UIImage(named: "cctv.png")
+    ]
     var presenter: MainPresenter!
     private var myContext = 0
     
@@ -26,12 +33,11 @@ class ViewController: UIViewController, MainPresenterDelegate,UITableViewDelegat
         
         self.progressView.alpha = 0.0
         self.tableView.backgroundColor = UIColor(displayP3Red: 250/255, green: 250/255, blue: 250/255, alpha: 1.0)
-        //presenter 생성
+        
+        self.appendToTextField(string: "라즈베리파이에 연결되지 않았습니다.")
+        
         self.presenter = MainPresenter(delegate:self)
         
-        //presenter 값을 모니터링하기 위해 observer을 추가함
-        //바뀌는 이 값들이 MainVC UI 이 수정 될 것임
-        //즉 쉽게 말해 바뀌는 이 값들을 실시간으로 모니터링 하여 특정 값에 해당하는 실행을 함
         self.addObserversForKVO()
     }
 
@@ -52,15 +58,17 @@ class ViewController: UIViewController, MainPresenterDelegate,UITableViewDelegat
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         if (Rclient != nil){
-            if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCellAccessoryType.checkmark{
-                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.none
+            if tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark{
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.none
             }else{
-                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCellAccessoryType.checkmark
+                tableView.cellForRow(at: indexPath)?.accessoryType = UITableViewCell.AccessoryType.checkmark
             }
+            
+            let isOn: String = tableView.cellForRow(at: indexPath)?.accessoryType == UITableViewCell.AccessoryType.checkmark ? "ON" : "OFF"
             
             guard let Reclient = Rclient else { return }
             
-            switch Reclient.send(string: deviceName[indexPath.row] ) {
+            switch Reclient.send(string: deviceName[indexPath.row]+isOn) {
             case .success:
                 guard let data = Reclient.read(1024*10) else { return }
                 
@@ -125,15 +133,9 @@ class ViewController: UIViewController, MainPresenterDelegate,UITableViewDelegat
         
         self.hideProgressBar()
 
-        self.showAlert(title: "Scan Finished", message: "Number of devices connected to the Local Area Network : \(self.presenter.connectedDevices.count)")
+        self.showAlert(title: "스캔 완료", message: "같은 AP에 연결된 기기의 수 : \(self.presenter.connectedDevices.count)")
+
         
-        /*
-        //textField에 검색된 ip주소들 나타내기
-        let deviceCount = self.presenter.connectedDevices.count
-        for inx in 0...deviceCount-1 {
-            ipinfo.text = ipinfo.text.appending("\n\(self.presenter.connectedDevices[inx].ipAddress as String)")
-        }
-        */
         //----------서버 연결----------//
         connectServer()
         //----------서버 연결----------//
@@ -142,45 +144,23 @@ class ViewController: UIViewController, MainPresenterDelegate,UITableViewDelegat
     func connectServer(){
         if (self.presenter.connectedDevices.count != 0)
         {
-            
-            
-             //--------------------------------------실제 코드--------------------------------------//
-             let deviceCount = self.presenter.connectedDevices.count
-             for inx in 0...deviceCount-1 {
+            let deviceCount = self.presenter.connectedDevices.count
+            for inx in 0...deviceCount - 1 {
              
-             let host = self.presenter.connectedDevices[inx].ipAddress as String
+                let host = self.presenter.connectedDevices[inx].ipAddress as String
              
-             client = TCPClient(address: host, port: Int32(port))
-             guard let client = client else { return }
+                client = TCPClient(address: host, port: Int32(port))
+                guard let client = client else { return }
              
-             let StartServer = client.connect(timeout: 5)
-             if StartServer.isSuccess{
-             Rclient = client
-             appendToTextField(string: "\(client.address)에 연결 되었습니다.")
-             }else{
-             appendToTextField(string: "라즈베리파이가 검색 되지 않습니다.")
-             }
-             
-             }
-             //--------------------------------------실제 코드--------------------------------------//
-             
+                let StartServer = client.connect(timeout: 3)
             
-            /*
-            //--------------------------------------Test--------------------------------------//
-            let host = "127.0.0.1" //test 용
-            
-            client = TCPClient(address: host, port: Int32(port))
-            guard let client = client else { return }
-            
-            let StartServer = client.connect(timeout: 5)
-            if StartServer.isSuccess{
-                Rclient = client
-                appendToTextField(string: "\(client.address)에 연결 되었습니다.")
-            }else{
-                appendToTextField(string: "라즈베리파이가 검색 되지 않습니다.")
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1){
+                    if StartServer.isSuccess{
+                        self.Rclient = client
+                        self.appendToTextField(string: "\(client.address)에 연결 되었습니다.")
+                    }
+                }
             }
-            //--------------------------------------Test--------------------------------------//
-            */
         }else{
             appendToTextField(string: "새로 고침 다시 해주세요")
         }
@@ -194,14 +174,14 @@ class ViewController: UIViewController, MainPresenterDelegate,UITableViewDelegat
     func mainPresenterIPSearchFailed() {
         
         self.hideProgressBar()
-        self.showAlert(title: "Failed to scan", message: "Please make sure that you are connected to a WiFi before starting LAN Scan")
+        self.showAlert(title: "스캔이 실패하였습니다.", message: "와이파이에 제대로 연결 되어 있는지 확인 하세요")
     }
     
     func showAlert(title:String, message: String) {
         
-        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
         
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in}
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (result : UIAlertAction) -> Void in}
         
         alertController.addAction(okAction)
         
@@ -209,9 +189,9 @@ class ViewController: UIViewController, MainPresenterDelegate,UITableViewDelegat
     }
     func showErrorAlert() {
         
-        let alertController = UIAlertController(title: "에러", message: "서버에 연결되지 않았습니다.", preferredStyle: UIAlertControllerStyle.alert)
+        let alertController = UIAlertController(title: "에러", message: "서버에 연결되지 않았습니다.", preferredStyle: UIAlertController.Style.alert)
         
-        let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.default) { (result : UIAlertAction) -> Void in}
+        let okAction = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { (result : UIAlertAction) -> Void in}
         
         alertController.addAction(okAction)
         
@@ -230,7 +210,7 @@ class ViewController: UIViewController, MainPresenterDelegate,UITableViewDelegat
                 let isScanRunning = change?[.newKey] as! BooleanLiteralType
                 self.scanButton.image = isScanRunning ? #imageLiteral(resourceName: "stop") : #imageLiteral(resourceName: "refresh")
             default:
-                print("Not valid key for observing")
+                print("유효하지 않은 키")
             }
         }
     }
@@ -244,7 +224,6 @@ class ViewController: UIViewController, MainPresenterDelegate,UITableViewDelegat
 
     
     private func appendToTextField(string: String) {
-        print(string)
         navigationBarTitle.title = string
     }
 }
