@@ -6,11 +6,11 @@ but you can you with any device if that device can Socket program
 <Flowchart>
 
 Click Refresh Button
-          ⇣
+          ->
 Start all Find devices from AP
-          ⇣
+          ->
 Connect with same Port device
-          ⇣
+          ->
 Now you can start clicking button for controller
 
 --------------------------------------------------------------------------------------------------------
