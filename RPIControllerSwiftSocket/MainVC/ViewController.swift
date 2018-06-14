@@ -8,7 +8,7 @@ class ViewController: UIViewController, MainPresenterDelegate,UITableViewDelegat
     @IBOutlet weak var scanButton: UIBarButtonItem!
     @IBOutlet weak var tableTopConstraint: NSLayoutConstraint!
     @IBOutlet weak var tableView: UITableView!
-    //aa
+    
     let deviceName: [String] = ["HomeLight","MainDoor","GarageDoor","Thermometer","oven","washingmachine","cctv"]
     let deviceImg = [
         UIImage(named: "light.png"),
